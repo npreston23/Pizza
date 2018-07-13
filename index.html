@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <script type="text/javascript" src="js/scripts.js"></script>
+    <link rel="stylesheet" type="text/css" href="css/styles.css" media="screen">
+    <script src="js/jquery-3.3.1.js"></script>
+  </head>
+  <body>
+    <h1>NATALIE'S PIZZERIA</h1>
+    <form id=topping_selection>
+      <div class="form-group">
+        <label><input type="checkbox" value="all" id="all">All</label>
+        <label><input type="checkbox" name="topping" value="pepperoni">Pepperoni</label>
+        <label><input type="checkbox" name="topping" value="pineapple">Pineapple</label>
+        <label><input type="checkbox" name="topping" value="sausage">Sausage</label>
+        <label><input type="checkbox" name="topping" value="peppers">Peppers</label>
+        <label><input type="checkbox" name="topping" value="summerVeggies">Summer Veggie Mix</label>
+      </div>
+        <button type="submit">Submit Order</button>
+      </form>
+      <span id="pizza-order">
+        <p><b>Here is the pizza you have chosen to order:</b></p>
+      </span>
+  </body>
+</html>
