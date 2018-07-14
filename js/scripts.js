@@ -1,3 +1,16 @@
+$(document).ready(function(){
+  $("form#topping_selection").submit(function(event){
+    event.preventDefault();
+    $("#pizza-order").show();
+    $("input:checkbox[name=topping]:checked").each(function(){
+      var toppingOptions = $(this).val();
+      $('#pizza-order').append(toppingOptions + "<br>");
+    });
+    $('#topping_selection').hide();
+  });
+});
+
+
 //Select all checkboxes
 (function(){
   var form = document.getElementById('pizza');
