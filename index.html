@@ -7,20 +7,33 @@
     <script type="text/javascript" src="js/scripts.js"></script>
   </head>
   <body>
-    <h1>NATALIE'S PIZZERIA</h1>
-    <form id=topping_selection>
-      <div class="form-group">
-        <label><input type="checkbox" value="all" id="all">All</label>
-        <label><input type="checkbox" name="topping" value="pepperoni">Pepperoni</label>
-        <label><input type="checkbox" name="topping" value="pineapple">Pineapple</label>
-        <label><input type="checkbox" name="topping" value="sausage">Sausage</label>
-        <label><input type="checkbox" name="topping" value="peppers">Peppers</label>
-        <label><input type="checkbox" name="topping" value="summer Veggies">Summer Veggie Mix</label>
+    <div class="header">
+      <h1>NATALIE'S PIZZERIA</h1>
+    </div>
+
+    <form id=Pizza>
+      <div class="topping">
+        <label><input type="checkbox" value="all" id="all">Select All</label>
+        <label><input type="checkbox" name="Topping" value="pepperoni">Pepperoni</label>
+        <label><input type="checkbox" name="Topping" value="pineapple">Pineapple</label>
+        <label><input type="checkbox" name="Topping" value="sausage">Sausage</label>
+        <label><input type="checkbox" name="Topping" value="peppers">Peppers</label>
+        <label><input type="checkbox" name="Topping" value="summer veggies">Summer Veggie Mix</label>
       </div>
-        <button type="submit">Submit Order</button>
-      </form>
-      <span id="pizza-order">
-        <p><b>Here is the pizza you have chosen to order:</b></p>
-      </span>
+
+      <div class="size">
+        <label><input type="checkbox" name="Size" value="Small">Small</label>
+        <label><input type="checkbox" name="Size" value="Medium">Medium</label>
+        <label><input type="checkbox" name="Size" value="Large">Large</label>
+      </div>
+      <button type="submit">Submit Order</button>
+    </form>
+
+    <span id="topping-order"><p>Here are the toppings you have selected:</p>
+    </span>
+    <br>
+    <span id="size-order"><p>Pizza size:</p>
+    </span>
+
   </body>
 </html>

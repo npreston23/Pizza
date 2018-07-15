@@ -1,29 +1,35 @@
 $(document).ready(function(){
-  $("form#topping_selection").submit(function(event){
+  $("form#Pizza").submit(function(event){
     event.preventDefault();
-    $("#pizza-order").show();
-    $("input:checkbox[name=topping]:checked").each(function(){
+    $("#topping-order").show();
+    $("input:checkbox[name=Topping]:checked").each(function(){
       var toppingOptions = $(this).val();
-      $('#pizza-order').append(toppingOptions + "<br>");
+      $('#topping-order').append(toppingOptions + "<br>");
     });
-    $('#topping_selection').hide();
+    $("#size-order").show();
+    $("input:checkbox[name=Size]:checked").each(function(){
+      var pizzaSize = $(this).val();
+      $('#size-order').append(pizzaSize + "<br>");
+    });
+    $('form#Pizza').hide();
   });
 });
 
-
-//Select all checkboxes
+/*
+//Select all checkboxes - Not working!
 (function(){
-  var form = document.getElementById('pizza');
-  var elements = form.elements;
-  var options = elements.topping;
-  var all = document.getElementById('all');
+  var formTopping = document.getElementById ('Topping'); //Get topping Form
+  var elements = form.elements; //All elements in form
+  var options = elements.Topping; //Array: Topping checkboxes
+  var all = document.getElementById('all'); //The all checkbox
 
   function updateAll(){
-    for (var i = o; i < options.length; i++) {
+    for (var i = 0; i < options.length; i++) {
       options[i].checked = all.checked;
     }
   }
-  addEvent(all, 'change', updateAll);
+
+  addEvent(all, 'change', updateAll); //Add event listener
 
   function clearAllOption(e) {
     var target = e.target || e.srcElement;
@@ -32,6 +38,19 @@ $(document).ready(function(){
     }
   }
   for (var i = 0; i < options.length; i++) {
-    addEvent(options[i], 'change', clearAllOption);
+    addEvent(options[i], 'change', clearAllOption(e));
   }
+
+
 }());
+
+(function(){
+  var formSize = document.getElementById ('Size'); //Get size Form
+  var elements = form.elements; //All elements in form
+  var size = elements.Size; //Array: Size checkboxes
+
+  function updateAll(){
+    for (var i = 0; i < size.length; i++) {
+    }
+  }
+}()); *\

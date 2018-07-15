@@ -1,3 +1,21 @@
-#pizza-order {
+#topping-order {
   display: none;
+}
+
+#size-order {
+  display: none;
+}
+
+.header {
+    background-color: #F1F1F1;
+    text-align: center;
+    padding: 20px;
+}
+
+#topping {
+  margin-left: 400px;
+}
+
+#button {
+  margin-left: 220px;
 }
